@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jaleed Mekkekat - IT Support Specialist</title>
+    <link rel="icon" type="image/x-icon" href="propic.jpg">
+    
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <style>
+        /* Professional Color Scheme */
+        :root {
+            --primary: #2c3e50;     /* Dark blue */
+            --secondary: #3498db;   /* Bright blue */
+            --accent: #e74c3c;      /* Red accent */
+            --light: #ecf0f1;       /* Light gray */
+            --dark: #2c3e50;        /* Dark text */
+            --text: #34495e;        /* Primary text */
+            --bg-primary: #3498db;  /* Navbar background */
+        }
+        
+        /* Typography */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        
+        h1, h2, h3, h4, h5, h6,
+        .navbar-brand,
+        .subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; color: var(--accent); }
+        h3 { font-size: 1.8rem; }
+        
+        .lead {
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+        
+        .text-primary { color: var(--secondary) !important; }
+        
+        /* Navigation */
+        .navbar-dark {
+            background-color: var(--bg-primary) !important;
+        }
+        
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+        
+        hr {
+            border-color: var(--light);
+            margin: 2rem 0;
+        }
+        
+        /* Slider Styles */
+        .cert-slider, .image-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cert-slides, .image-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .cert-slide, .image-slide {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .cert-slide img, .image-slide img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .cert-slide p, .image-slide p {
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .slider-nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .slider-nav button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-nav button:hover {
+            background-color: var(--primary);
+        }
+        
+        .slider-dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background-color: var(--secondary);
+        }
+        
+        /* Social Icons */
+        .social-icons a {
+            background-color: var(--primary);
+            color: white !important;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* Experience Cards */
+        .d-flex.flex-column {
+            border-left: 4px solid var(--secondary);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .d-flex.flex-column:hover {
+            transform: translateX(5px);
+        }
+        
+        /* Footer */
+        .navbar {
+            background-color: var(--primary);
+        }
+        
+        marquee {
+            color: white;
+            padding: 10px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Job specific styling */
+        .job-title { color: var(--primary); }
+        .company-name { color: var(--secondary); }
+        .job-date { color: var(--secondary); }
+        .section-title { color: var(--accent); }
+    </style>
+</head>
+<body id="page-top">    
+    <!-- Navigation-->
+    <nav class="navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Jaleed Mekkekat</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="jaleed1.jpg" alt="Profile"></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Learning & Certifications</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Skills</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certifications & Achievements</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Images">Images</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h1 class="mb-0">Jaleed <span class="text-primary">Mekkekat</span></h1>
+                <div class="subheading mb-5">
+                    IT Support Specialist · +966 550904558 ·
+                    <a href="mailto:jaleed2009@gmail.com">jaleed2009@gmail.com</a>
+                </div>
+                <p class="lead mb-5">
+                    IT Support Specialist with 12 years of experience in hardware, network
+                    engineering, and software applications. Proven success in customer service and issue
+                    resolution with notable roles in the Ministry of Education, a leading bank, and a real
+                    estate firm in Saudi Arabia. Known for strong interpersonal skills and a focus on tailored
+                    solutions. Seeking new opportunities to apply my expertise in IT support.
+                </p>
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/jaleed-mekkekat-209285235" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="social-icon" href="https://www.facebook.com/jaleed.mekekkad" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/jaleed_mk?igsh=d20zajAxNmp3czFu" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="social-icon" href="https://wa.me/+966550904558" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Experience-->
+        <section class="resume-section" id="experience">
+            <div class="resume-section-content">
+                <h2 class="mb-5 section-title">Experience</h2>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0 job-title">IT Support Engineer</h3>
+                        <div class="subheading mb-3 company-name"><h5 style="color: #3498db;">Al Othaim Investment Company, Riyadh, Saudi Arabia </h5></div>
+                        <p class="job-date">September 2018 - Present</p>
+                        <div>
+                            <h5>Azure and Microsoft 365 Administration:</h5>
+                            <p>Assist with managing Azure infrastructure, including virtual machines, storage, and networking. Support Microsoft 365 tasks such as user account management and handling email, SharePoint, Teams, and OneDrive. Help implement security measures, monitor performance, and ensure policy compliance.</p>
+                            
+                            <h5>Helpdesk Management:</h5>
+                            <p>Lead the IT helpdesk team, providing Tier 1 and 2 technical supports for hardware, software, and network issues. Ensure prompt resolution of issues, maintaining a 95%+ customer satisfaction rate.</p>
+
+                            <h5>Managed Software Licenses:</h5>
+                            <p>Oversaw licensing for a diverse range of design and visualization tools, including Autodesk products (AutoCAD, 3ds Max), V-Ray, Corona Renderer, Adobe Creative Suite, Itoo Forest, Lumion, and SketchUp.</p>
+
+                            <h5>License Administration:</h5>
+                            <p>Administered and tracked software licenses to ensure compliance with vendor agreements and optimize software usage across departments.</p>
+                            
+                            <h5>System Monitoring & Documentation:</h5>
+                            <p>Monitor IT systems, identify potential issues, and maintain comprehensive documentation of IT processes.</p>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="AOINV.jpg" alt="Al Othaim Investment Company" width="200">
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0 job-title">IT Technical Support Engineer</h3>
+                        <div class="subheading mb-3 company-name"><h5 style="color: #3498db;">al-rajhi bank Head Office, riyadh saudi arabia </h5></div>
+                        <p class="job-date">November 2018 - September 2023</p>
+                        <div>
+                            <p>Hardware replacement/upgrade including monitors, printers, desktops, IP phones, routers, switches.</p>
+                            <p>OS installation, upgradation & troubleshooting.</p>
+                            <p>Application/software installation, upgradation & troubleshooting.</p>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="ALRAJHI1.PNG" alt="Al Rajhi Bank" width="250">
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0 job-title">Computer & Networking Technician</h3>
+                        <div class="subheading mb-3 company-name"><h5 style="color: #3498db;">Taif University, Taif, Saudi Arabia</h5></div>
+                        <p class="job-date">December 2012 - October 2018</p>
+                        <div>
+                            <p>Installed and maintained university's computer systems and network.</p>
+                            <p>Completed troubleshooting and repair for computers and networking equipment.</p>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="tu.jpg" alt="Taif University" width="250">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Education-->
+        <section class="resume-section" id="education">
+            <div class="resume-section-content">
+                <h3 class="mb-5 section-title">Education</h3>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h4 class="mb-0">Advanced Diploma in Computer Hardware and Networking</h4>
+                        <div class="subheading mb-3">Merit Computer Education Institute</div>
+                    </div>
+                    <div class="flex-shrink-0"><span>2007-2008</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h4 class="mb-0">Higher Secondary Education</h4>
+                        <div class="subheading mb-3">Kerala Education Board</div>
+                    </div>
+                    <div class="flex-shrink-0"><span>2005-2007</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h4 class="mb-0">Secondary Education</h4>
+                        <div class="subheading mb-3">Kerala Education Board</div>
+                    </div>
+                    <div class="flex-shrink-0"><span>June 2005</span></div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Skills-->
+        <section class="resume-section" id="skills">
+            <div class="resume-section-content">
+                <h2 class="mb-5 section-title">Learning & Certifications</h2>
+                <div class="subheading mb-3">Azure Administrator</div>
+                <div class="subheading mb-3">Microsoft 365 Administration</div>
+                <div class="subheading mb-3">MCSA Windows Server 2012 Certified</div>
+                <div class="subheading mb-3">MCP Microsoft Certified Professional</div>
+                <div class="subheading mb-3">SCE Membership</div>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Interests-->
+        <section class="resume-section" id="interests">
+            <div class="resume-section-content">
+                <h2 class="mb-5 section-title">Skills</h2>
+                <ul>
+                    <li>IT Troubleshooting & Problem Solving</li>
+                    <li>Cloud Platforms: Azure (virtual machines, storage, networking)</li>
+                    <li>Microsoft 365: User management, Teams, SharePoint, OneDrive</li>
+                    <li>Onsite & Remote Technical Support</li>
+                    <li>LAN & WAN Connectivity & Maintenance</li>
+                    <li>Computer Hardware Systems & Components</li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Awards-->
+        <section class="resume-section" id="awards">
+            <div class="resume-section-content">
+                <h2 class="mb-5 section-title">Certifications & Achievements</h2>
+
+                <!-- Awards Slider -->
+                <div class="cert-slider">
+                    <div class="cert-slides">
+                        <!-- Slide 1 -->
+                        <div class="cert-slide">
+                            <p><b>Microsoft Certified Professional</b></p>
+                            <img src="MCP.PGP.PNG" alt="Microsoft Certified Professional">
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="cert-slide">
+                            <p><b>MCSA: Microsoft Windows Server 2012</b></p>
+                            <img src="MCSA.PNG" alt="MCSA Certification">
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="cert-slide">
+                            <p><b>Saudi Council of Engineers</b></p>
+                            <img src="SAUDIENG.png" alt="Saudi Council of Engineers">
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="cert-slide">
+                            <p><b>Taif University</b></p>
+                            <img src="certtu.jpg" alt="Taif University Certificate">
+                        </div>
+                        
+                        <!-- Slide 5 -->
+                        <div class="cert-slide">
+                            <p><b>Taif University</b></p>
+                            <img src="certtu1.jpg" alt="Taif University Certificate 2">
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="cert-slide">
+                            <p><b>Taif University</b></p>
+                            <img src="mementotu.jpg" alt="Taif University Certificate 2">
+                        </div>
+
+                        <!-- Slide 7 -->
+                        <div class="cert-slide">
+                            <p><b>Alrajhi Bank</b></p>
+                            <img src="certrajhi.jpg" alt="Alrajhi Bank">
+                        </div>
+
+                        <!-- Slide 8 -->
+                        <div class="cert-slide">
+                            <p><b>Alrajhi Bank</b></p>
+                            <img src="Rajhi(bcm).jpeg" alt="Alrajhi Bank">
+                        </div>
+
+                         <!-- Slide 9 -->
+                         <div class="cert-slide">
+                            <p><b>Alrajhi Bank</b></p>
+                            <img src="mementoalrajhi.jpg" alt="Alrajhi Bank">
+                        </div>
+
+                         <!-- Slide 10 -->
+                         <div class="cert-slide">
+                            <p><b>Alrajhi Bank</b></p>
+                            <img src="data center.jpg" alt="Alrajhi Bank">
+                        </div>
+
+                         <!-- Slide 11 -->
+                         <div class="cert-slide">
+                            <p><b>Al Othaim Investment Company</b></p>
+                            <img src="Othaim.jpg" alt="Alrajhi Bank">
+                        </div>
+
+                         <!-- Slide 12 -->
+                         <div class="cert-slide">
+                            <p><b>Microsoft Azure</b></p>
+                            <img src="Azure IWC.png" alt="Microsoft Azure">
+                        </div>
+
+                         <!-- Slide 13 -->
+                         <div class="cert-slide">
+                            <p><b>Microsoft 365 Administration</b></p>
+                            <img src="M365 Administration IWC.png" alt="Microsoft 365 Administration">
+                        </div>
+
+                         <!-- Slide 14 -->
+                         <div class="cert-slide">
+                            <p><b>Microsoft Teams</b></p>
+                            <img src="Teams Admin IWC.png" alt="Microsoft Teams">
+                        </div>
+
+
+                    </div>
+                    
+                    <div class="slider-nav">
+                        <button class="awards-prev">Previous</button>
+                        <button class="awards-next">Next</button>
+                    </div>
+                    
+                    <div class="slider-dots awards-dots"></div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Images-->
+        <section class="resume-section" id="Images">
+            <div class="resume-section-content">
+                <h2 class="mb-5 section-title">Images</h2>
+
+                <!-- Images Slider -->
+                <div class="image-slider">
+                    <div class="image-slides">
+                        <!-- Slide 1 -->
+                        <div class="image-slide">
+                            <p><b>Alrajhi Bank</b></p>
+                            <img src="Covid1.jpg" alt="COVID-19 Activity">
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="image-slide">
+                            <p><b>Alrajhi Bank</b></p>
+                            <img src="Covid2.jpg" alt="COVID-19 Activity 2">
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="image-slide">
+                            <p><b>Al Othaim Investment Company</b></p>
+                            <img src="INV.jpg" alt="COVID-19 Activity 2">
+                        </div>
+
+                    </div>
+                    
+                    <div class="slider-nav">
+                        <button class="images-prev">Previous</button>
+                        <button class="images-next">Next</button>
+                    </div>
+                    
+                    <div class="slider-dots images-dots"></div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+
+        <!-- Resume-->
+        <section class="resume-section" id="Resume">
+            <div class="resume-section-content">
+                <h2 class="section-title">Resume</h2>
+                <p>To see my resume <a href="Jaleed_Mekkekat_IT_Infrastructure_Support_Engineer.pdf">Click here</a>.</p>
+            </div>
+        </section>
+                    
+        <div class="navbar" id="myNavbar">
+            <marquee behavior="scroll" direction="left">
+                Website Design by Jaleed Mekkekat, Contact: +966 550904558, Email: Jaleed2009@Gmail.com
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    
+    <!-- Slider JavaScript - Manual Navigation Only -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Awards Slider
+            const awardsSlider = {
+                slides: document.querySelector('.cert-slides'),
+                slideCount: document.querySelectorAll('.cert-slide').length,
+                prevBtn: document.querySelector('.awards-prev'),
+                nextBtn: document.querySelector('.awards-next'),
+                dotsContainer: document.querySelector('.awards-dots'),
+                currentIndex: 0
+            };
+            
+            // Initialize Images Slider
+            const imagesSlider = {
+                slides: document.querySelector('.image-slides'),
+                slideCount: document.querySelectorAll('.image-slide').length,
+                prevBtn: document.querySelector('.images-prev'),
+                nextBtn: document.querySelector('.images-next'),
+                dotsContainer: document.querySelector('.images-dots'),
+                currentIndex: 0
+            };
+            
+            // Function to initialize a slider
+            function initSlider(slider) {
+                // Create dots
+                for (let i = 0; i < slider.slideCount; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(slider, i));
+                    slider.dotsContainer.appendChild(dot);
+                }
+                
+                const dots = slider.dotsContainer.querySelectorAll('.dot');
+                
+                function updateSlider() {
+                    slider.slides.style.transform = `translateX(-${slider.currentIndex * 100}%)`;
+                    
+                    // Update dots
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === slider.currentIndex);
+                    });
+                }
+                
+                function goToSlide(index) {
+                    slider.currentIndex = index;
+                    if (slider.currentIndex >= slider.slideCount) slider.currentIndex = 0;
+                    if (slider.currentIndex < 0) slider.currentIndex = slider.slideCount - 1;
+                    updateSlider();
+                }
+                
+                slider.prevBtn.addEventListener('click', () => {
+                    slider.currentIndex--;
+                    if (slider.currentIndex < 0) slider.currentIndex = slider.slideCount - 1;
+                    updateSlider();
+                });
+                
+                slider.nextBtn.addEventListener('click', () => {
+                    slider.currentIndex++;
+                    if (slider.currentIndex >= slider.slideCount) slider.currentIndex = 0;
+                    updateSlider();
+                });
+            }
+            
+            // Initialize both sliders
+            initSlider(awardsSlider);
+            initSlider(imagesSlider);
+        });
+    </script>
+</body>
+</html>
